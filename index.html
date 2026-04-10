@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Natangué Digital | Agence Digitale & Bureautique</title>
+  <meta name="description" content="Natangué Digital : design graphique, impression, marketing digital, création de sites et applications web au Sénégal." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <h1 class="logo">Natangué<span>Digital</span></h1>
+    <nav>
+      <a href="#about">À propos</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn whatsapp" href="https://wa.me/221000000000" target="_blank">WhatsApp</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content container">
+    <br><br><br><br><br><br> 
+    <h2 class="reveal">Transformez votre activité avec le digital</h2>
+    <p class="reveal delay">Design • Impression • Web • Marketing</p>
+    <br>
+    <div class="hero-actions reveal delay2">
+      <a href="#services" class="btn primary">Voir nos services</a>
+      <a href="https://wa.me/221000000000" target="_blank" class="btn outline">Nous contacter</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container two-cols">
+    <div class="text">
+      <h2 class="reveal">À propos de Natangué Digital</h2>
+      <p class="reveal delay">Nous accompagnons particuliers, écoles privées et entreprises dans leur transformation digitale : création graphique, impression, papeterie, marketing et développement web.</p>
+      <ul class="reveal delay2">
+        <li>✔ Service rapide et professionnel</li>
+        <li>✔ Solutions adaptées à votre budget</li>
+        <li>✔ Expertise design & technologie</li>
+      </ul>
+    </div>
+    <div class="image reveal">
+      <img src="https://picsum.photos/600/500" alt="Agence digitale" />
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section dark">
+  <div class="container">
+    <h2 class="center reveal">Nos Services</h2>
+    <div class="carousel">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="card"><img src="https://picsum.photos/300/200?1"><h3>Papeterie & Librairie</h3></div>
+        <div class="card"><img src="https://picsum.photos/300/200?2"><h3>Design Graphique</h3></div>
+        <div class="card"><img src="https://picsum.photos/300/200?3"><h3>Création Web</h3></div>
+        <div class="card"><img src="https://picsum.photos/300/200?4"><h3>Impression</h3></div>
+        <div class="card"><img src="https://picsum.photos/300/200?5"><h3>Photo minute</h3></div>
+        <div class="card"><img src="https://picsum.photos/300/200?6"><h3>Marketing Digital</h3></div>
+      </div>
+      <button class="carousel-btn prev" onclick="moveSlide(-1)">‹</button>
+      <button class="carousel-btn next" onclick="moveSlide(1)">›</button>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" class="section">
+  <div class="container">
+    <h2 class="center reveal">Nos Réalisations</h2>
+    <div class="grid">
+      <img class="reveal" src="https://picsum.photos/400/300?7">
+      <img class="reveal delay" src="https://picsum.photos/400/300?8">
+      <img class="reveal delay2" src="https://picsum.photos/400/300?9">
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section contact">
+  <div class="container center">
+    <h2 class="reveal">Contactez-nous</h2>
+    <p class="reveal delay">Disponible pour vos projets</p>
+    <br>
+    <a href="https://wa.me/221000000000" target="_blank" class="btn primary">WhatsApp Direct</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Natangué Digital</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
