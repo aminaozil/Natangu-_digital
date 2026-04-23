@@ -19,6 +19,7 @@ function moveSlide(dir){
   if(index>cards.length-3) index=cards.length-3;
   track.style.transform=`translateX(-${index*width}px)`;
 }
+
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("nav-menu");
 
@@ -26,7 +27,6 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
 });
-
 
 const cards = document.querySelectorAll(".team-card");
 
