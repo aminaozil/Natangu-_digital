@@ -13,84 +13,378 @@
 </head>
 <body>
 
-<header class="header">
-  <div class="container nav">
-    <h1 class="logo">Natangué<span>Digital</span></h1>
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+  <header class="header">
+    <div class="container nav">
+  
+      <h1 class="logo">
+        Natangué Digital
+        <span class="subtitle">Du stylo au code</span>
+      </h1>
+  
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  
+      <nav id="nav-menu">
+        <a href="#hero">Accueil</a>
+        <a href="#services">Nos Services</a>
+        <a href="#about">À propos</a>
+        <a href="#contact">Contactez-nous</a>
+      </nav>
+  
     </div>
-    <nav id="nav-menu">
-      <a href="#about">À propos</a>
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+  </header>
 
 <section class="hero">
   <div class="overlay"></div>
-  <div class="hero-content container">
-    <br><br><br><br><br><br> 
-    <h2 class="reveal">Transformez votre activité avec le digital</h2>
-    <p class="reveal delay">Design • Impression • Web • Marketing</p>
-    <br>
-    <div class="hero-actions reveal delay2">
-      <a href="#services" class="btn primary">Voir nos services</a>
-      <a href="https://wa.me/221000000000" target="_blank" class="btn outline">Nous contacter</a>
+
+  <div class="hero-content container two-cols">
+
+    <!-- TEXTE -->
+    <div class="hero-text">
+      <h1 class="reveal">
+        Boostez votre business avec <span>Natangué Digital</span>
+      </h1>
+
+      <p class="reveal delay1">
+        Création de sites web, design graphique, impression et marketing digital pour développer votre activité.
+      </p>
+
+      <div class="hero-actions reveal delay2">
+        <a href="#services" class="btn primary">Voir nos services</a>
+        <a href="https://wa.me/221785950314" target="_blank" class="btn whatsapp-btn">
+          <i class="fab fa-whatsapp"></i> Discuter sur WhatsApp
+        </a>
+      </div>
     </div>
+
+    <!-- IMAGE -->
+    <div class="hero-image reveal delay3">
+      <img src="images/corporate_website_design.jpg" alt="Agence digitale">
+    </div>
+
   </div>
 </section>
 
-<section id="about" class="section">
-  <div class="container grid">
-    <div class="text">
-      <h2 class="reveal">À propos de Nous</h2>
-      <p class="reveal delay">Natangué Digital est une agence spécialisée dans les services digitaux, la bureautique et la création graphique, dédiée à accompagner particuliers, établissements scolaires et entreprises dans leur développement et leur transformation digitale.
-
-        Nous proposons des solutions complètes et sur mesure allant de la conception graphique (flyers, logos, affiches, cartes de visite) à l’impression professionnelle, en passant par la papeterie, le marketing digital (branding, identité visuelle) et la création de sites et applications web modernes.
-      </p>
+<section class="section why-us">
+  <div class="container">
     
-      <p class="reveal delay">
-        Notre mission est d’offrir à chaque client des services de qualité, accessibles et adaptés à ses besoins, afin de valoriser son image et accélérer sa croissance.
+    <h2 class="center reveal">Pourquoi nous choisir ?</h2>
+
+    <div class="why-grid">
+
+      <div class="why-card reveal delay1">
+        <i class="fas fa-layer-group"></i>
+        <h3>Services variés</h3>
+        <p>
+          Nous proposons une large gamme de services, allant de la création de sites web à la conception graphique, pour répondre à tous vos besoins.
+        </p>
+      </div>
+
+      <div class="why-card reveal delay2">
+        <i class="fas fa-user-tie"></i>
+        <h3>Expertise professionnelle</h3>
+        <p>
+          Notre équipe est composée de professionnels expérimentés qui s'engagent à fournir des solutions de qualité supérieure à chaque client.
+        </p>
+      </div>
+
+      <div class="why-card reveal delay3">
+        <i class="fas fa-bullseye"></i>
+        <h3>Approche personnalisée</h3>
+        <p>
+          Nous croyons en une approche sur mesure pour chaque projet, garantissant que vos objectifs uniques soient atteints.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section id="about" class="section about">
+  <div class="container about-grid">
+
+    <!-- IMAGE -->
+    <div class="about-image reveal">
+      <img src="images/logo.png" alt="Agence digitale">
+    </div>
+
+    <!-- TEXTE -->
+    <div class="about-text">
+      <h2 class="reveal">À propos de nous</h2>
+
+      <p class="reveal delay1">
+        Natangué Digital est une agence spécialisée dans les services digitaux, la bureautique et la création graphique, dédiée à accompagner particuliers, établissements scolaires et entreprises dans leur transformation digitale.
       </p>
+
+      <p class="reveal delay2">
+        Nous proposons des solutions complètes allant de la conception graphique à l’impression professionnelle, en passant par la papeterie, le marketing digital et la création de sites et applications web modernes.
+      </p>
+
+      <p class="reveal delay3">
+        Notre mission est d’offrir des services de qualité adaptés à chaque client afin de valoriser son image et accélérer sa croissance.
+      </p>
+
+      <!-- petits points forts -->
+      <div class="about-features reveal delay4">
+        <span>✔ Qualité professionnelle</span>
+        <span>✔ Solutions sur mesure</span>
+        <span>✔ Accompagnement complet</span>
+      </div>
     </div>
-    <div class="image reveal">
-      <img src="https://picsum.photos/600/500" alt="Agence digitale" />
+
+  </div>
+</section>
+
+<section class="section team">
+  <div class="team-bg"></div> <!-- background animé -->
+
+  <div class="container">
+    <h2 class="center reveal">Rencontrez notre équipe dynamique</h2>
+    <p class="center reveal delay1 subtitle">
+      Une excellente équipe pour booster votre productivité digitale
+    </p>
+
+    <div class="team-grid">
+      <div class="team-card reveal delay2">
+        <h3>Notre équipe créative</h3>
+        <p>
+          Notre équipe est composée de designers, développeurs et spécialistes du marketing qui apportent chacun leur expertise unique à Natangué Digital. Chacun de nos membres est passionné par son domaine et s'engage à fournir des solutions innovantes pour nos clients. Ensemble, nous travaillons à créer des projets qui dépassent les attentes.
+        </p>
+      </div>
+
+      <div class="team-card reveal delay3">
+        <h3>Nos experts en marketing</h3>
+        <p>
+          Nos spécialistes en marketing digital jouent un rôle clé dans la réussite de nos projets. Avec une compréhension approfondie des tendances du marché, ils conçoivent des stratégies sur mesure qui garantissent une visibilité et un impact maximum. Leur expertise nous permet d'accompagner nos clients dans tous les aspects de leur communication digitale.
+        </p>
+      </div>
+
+      <div class="team-card reveal delay4">
+        <h3>Nos valeurs & culture</h3>
+        <p>
+          Chez Natangué Digital, nous croyons fermement en la collaboration et en l'innovation. Notre culture d'entreprise repose sur des valeurs telles que le respect, la créativité et l'engagement. Cela nous permet de créer un environnement de travail stimulant qui favorise le développement personnel et professionnel de chaque membre de l'équipe.
+        </p>
+      </div>
+
     </div>
+
   </div>
 </section>
 
 <section id="services" class="section dark">
   <div class="container">
     <h2 class="center reveal">Nos Services</h2>
-    <div class="carousel reveal">
-      <div class="carousel-track" id="carouselTrack">
-        <div class="card"><img src="images/bagages2_avec_sac.jpg"><h3>Papeterie & Librairie</h3></div>
-        <div class="card"><img src="images/design.jpg"><h3>Design Graphique</h3></div>
-        <div class="card"><img src="images/corporate_website_design.jpg"><h3>Création Web</h3></div>
-        <div class="card"><img src="images/imp.jpg"><h3>Impression</h3></div>
-        <div class="card"><img src="images/photominute.jpg"><h3>Photo minute</h3></div>
-        <div class="card"><img src="images/marketing_digital.jpg"><h3>Marketing Digital</h3></div>
+
+    <div class="services-grid reveal">
+      
+      <div class="service-item reveal delay1">
+        <img src="images/bagages2_avec_sac.jpg" alt="Papeterie">
+        <div class="service-content">
+          <h3>Papeterie & Librairie</h3>
+          <p>
+            Fourniture de cahiers, stylos, livres scolaires et matériels bureautiques de qualité.
+          </p>
+      
+          <a href="https://wa.me/221XXXXXXXXX?text=Bonjour, je veux un devis pour Papeterie & Librairie"
+             class="btn-devis"
+             target="_blank">
+            Demander un devis
+          </a>
+        </div>
       </div>
-      <button class="carousel-btn prev" onclick="moveSlide(-1)">‹</button>
-      <button class="carousel-btn next" onclick="moveSlide(1)">›</button>
+      <div class="service-item reveal delay2">
+        <img src="images/design.jpg" alt="Papeterie">
+        <div class="service-content">
+          <h3>Design Graphique</h3>
+          <p>
+            Création de logos modernes, affiches, flyers et identités visuelles professionnelles pour votre marque.
+          </p>
+      
+          <a href="https://wa.me/221XXXXXXXXX?text=Bonjour, je veux un devis pour Papeterie & Librairie"
+             class="btn-devis"
+             target="_blank">
+            Demander un devis
+          </a>
+        </div>
+      </div>
+
+      <div class="service-item reveal delay3">
+        <img src="images/Corporate_website_design.jpg" alt="Papeterie">
+        <div class="service-content">
+          <h3>Création de Sites Web</h3>
+          <p>
+            Développement de sites vitrines modernes, rapides et adaptés aux mobiles pour booster votre visibilité.
+          </p>
+          <a href="https://wa.me/221XXXXXXXXX?text=Bonjour, je veux un devis pour Papeterie & Librairie"
+             class="btn-devis"
+             target="_blank">
+            Demander un devis
+          </a>
+        </div>
+      </div>
+
+      <div class="service-item reveal delay4">
+        <img src="images/imp.jpg" alt="Papeterie">
+        <div class="service-content">
+          <h3>Impression</h3>
+          <p>
+            Impression de flyers, cartes de visite, affiches et documents avec une qualité professionnelle.
+          </p>
+          <a href="https://wa.me/221XXXXXXXXX?text=Bonjour, je veux un devis pour Papeterie & Librairie"
+             class="btn-devis"
+             target="_blank">
+            Demander un devis
+          </a>
+        </div>
+      </div>
+    
+      <div class="service-item reveal delay5">
+        <img src="images/mat_bureautique.jpg" alt="Papeterie">
+        <div class="service-content">
+          <h3>Matériel Informatique</h3>
+          <p>
+            Vente de matériel informatique, de périphériques et de logiciels.
+          </p>
+          <a href="https://wa.me/221XXXXXXXXX?text=Bonjour, je veux un devis pour Matériel Informatique"
+             class="btn-devis"
+             target="_blank">
+            Demander un devis
+          </a>
+          
+        </div>
+      </div>
+
+      <div class="service-item reveal delay6">
+        <img src="images/marketing_digital.jpg" alt="Papeterie">
+        <div class="service-content">
+          <h3>Marketing Digital</h3>
+          <p>
+            Gestion de réseaux sociaux, publicité en ligne et stratégies pour attirer plus de clients.
+          </p>
+          <a href="https://wa.me/221XXXXXXXXX?text=Bonjour, je veux un devis pour Papeterie & Librairie"
+             class="btn-devis"
+             target="_blank">
+            Demander un devis
+          </a>
+        </div>
+      </div>
+
+    
+
     </div>
   </div>
 </section>
-
-<section id="portfolio" class="section">
+<section class="section services-details">
   <div class="container">
-    <h2 class="center reveal">Nos Réalisations</h2>
-    <div class="grid">
-      <img class="reveal" src="images/oiseau.jpeg">
-      <img class="reveal delay" src="images/logo_diome_cons.jpeg">
-      <img class="reveal delay" src="images/carete_membre.jpeg">
-      <img class="reveal delay" src="images/teranga_poulet.jpeg">
-      
+
+    <h2 class="center reveal text-h2">Nos services en détail</h2>
+    <p class="center reveal delay1 subtitle text-color">
+      Des solutions complètes adaptées à tous vos besoins professionnels
+    </p>
+
+    <div class="details-grid">
+
+      <div class="details-card reveal delay2">
+        <h3>📚 Papeterie & Librairie</h3>
+        <ul>
+          <li>Cahiers & fournitures scolaires</li>
+          <li>Livres & documents</li>
+          <li>Matériel bureautique</li>
+        </ul>
+      </div>
+
+      <div class="details-card reveal delay3">
+        <h3>💻 Matériel informatique</h3>
+        <ul>
+          <li>Ordinateurs & accessoires</li>
+          <li>Installation logiciels</li>
+          <li>Maintenance & dépannage</li>
+        </ul>
+      </div>
+
+      <div class="details-card reveal delay4">
+        <h3>🌐 Création Web & Applications</h3>
+        <ul>
+          <li>Sites vitrines modernes</li>
+          <li>Applications web</li>
+          <li>Optimisation SEO</li>
+        </ul>
+      </div>
+
+      <div class="details-card reveal delay5">
+        <h3>🖨️ Impression</h3>
+        <ul>
+          <li>Flyers & affiches</li>
+          <li>Cartes de visite</li>
+          <li>Bâches & supports</li>
+        </ul>
+      </div>
+
+      <div class="details-card reveal delay6">
+        <h3>📢 Marketing Digital</h3>
+        <ul>
+          <li>Gestion réseaux sociaux</li>
+          <li>Publicité Facebook & Google</li>
+          <li>Stratégie digitale</li>
+        </ul>
+      </div>
+
+      <div class="details-card reveal delay6">
+        <h3>🎨 Design Graphique</h3>
+        <ul>
+          <li>Logo professionnel</li>
+          <li>Carte de visite</li>
+          <li>Affiches & flyers</li>
+          <li>CV professionnel</li>
+        </ul>
+      </div>
+
     </div>
+
+  </div>
+</section>
+
+<section id="contact" class="section contact-pro">
+  <div class="container">
+
+    <h2 class="center reveal">Parlons de votre projet 🚀</h2>
+    <p class="center reveal delay1 subtitle">
+      Contactez-nous dès maintenant et développons votre activité ensemble
+    </p>
+
+    <div class="contact-grid">
+
+      <!-- INFO -->
+      <div class="contact-info reveal delay2">
+        <h3>Contact rapide</h3>
+
+        <p><i class="fas fa-phone"></i> +221 78 595 03 14 / 76 537 71 73</p>
+        <p><i class="fas fa-envelope"></i> contact@natanguedigital.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Sénégal, Mbour, Naparou(en face restaurant Sangomar)</p>
+
+        <a href="https://wa.me/221785950314?text=Bonjour%20Natangué%20Digital,%20je%20veux%20un%20devis"
+           target="_blank"
+           class="btn whatsapp-btn contact-btn">
+          <i class="fab fa-whatsapp"></i> Discuter sur WhatsApp
+        </a>
+      </div>
+
+      <!-- FORMULAIRE -->
+      <div class="contact-form reveal delay3">
+        <form>
+          <input type="text" placeholder="Votre nom" required>
+          <input type="email" placeholder="Votre email" required>
+          <textarea placeholder="Décrivez votre besoin..." required></textarea>
+          <button type="submit" class="btn primary">Envoyer</button>
+        </form>
+      </div>
+
+    </div>
+
   </div>
 </section>
 <section>
@@ -101,19 +395,30 @@
   </a>
 </section>
 
-<section id="contact" class="section contact">
-  <div class="container center">
-    <h2 class="reveal">Contactez-nous</h2>
-    <p class="reveal delay">Disponible pour vos projets</p>
-    <br>
-    <a href="https://wa.me//221785950314?text=Bonjour%20Natangué%20Digital,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services" target="_blank" class="btn primary"><i class="fab fa-whatsapp"></i> WhatsApp Direct</a>
-  </div>
-</section>
+
 
 <footer>
   <p>© 2026 Natangué Digital</p>
 </footer>
 
-<script src="script.js"></script>
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+
+function revealOnScroll() {
+  const windowHeight = window.innerHeight;
+
+  reveals.forEach((el) => {
+    const elementTop = el.getBoundingClientRect().top;
+    const elementVisible = 120;
+
+    if (elementTop < windowHeight - elementVisible) {
+      el.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+</script>
 </body>
 </html>
