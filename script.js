@@ -51,27 +51,7 @@ cards.forEach(card => {
 });
 
 
-// FILTRAGE DES RÉALISATIONS
-const filterButtons = document.querySelectorAll(".filter-btn");
-const portfolioCards = document.querySelectorAll(".portfolio-card");
-
-filterButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    const filter = button.dataset.filter;
-
-    filterButtons.forEach(btn => btn.classList.remove("active"));
-    button.classList.add("active");
-
-    portfolioCards.forEach(card => {
-      const category = card.dataset.category;
-      const shouldShow = filter === "all" || category === filter;
-
-      card.classList.toggle("is-hidden", !shouldShow);
-    });
-  });
-});
-
-/// CARROUSEL DES REALISATIONS
+// CARROUSEL DES RÉALISATIONS
 
 const lightbox = document.getElementById("portfolioLightbox");
 const lightboxImage = document.getElementById("lightboxImage");
@@ -86,109 +66,142 @@ const nextImage = document.getElementById("nextImage");
 let currentImages = [];
 let currentIndex = 0;
 
-// OUVRIR UN PROJET
-document.querySelectorAll(".portfolio-zoom").forEach(button => {
+if (
+  lightbox &&
+  lightboxImage &&
+  lightboxTitle &&
+  lightboxDescription &&
+  imageCounter &&
+  closeLightbox &&
+  prevImage &&
+  nextImage
+) {
 
-  button.addEventListener("click", () => {
+  // OUVRIR UN PROJET
+  document.querySelectorAll(".portfolio-zoom").forEach(button => {
 
-    const card = button.closest(".portfolio-card");
-    const mainImage = card.querySelector("img");
+    button.addEventListener("click", () => {
 
-    currentImages = card.dataset.images
-      ? JSON.parse(card.dataset.images)
-      : [mainImage.getAttribute("src")];
+      const card = button.closest(".portfolio-card");
+      if (!card) return;
 
-    currentIndex = 0;
+      const mainImage = card.querySelector("img");
+      if (!mainImage) return;
 
-    lightboxTitle.textContent =
-      card.dataset.title || card.querySelector("h3").textContent;
+      try {
+        currentImages = card.dataset.images
+          ? JSON.parse(card.dataset.images)
+          : [mainImage.getAttribute("src")];
+      } catch (error) {
+        console.error("Erreur dans data-images :", error);
+        currentImages = [mainImage.getAttribute("src")];
+      }
 
-    lightboxDescription.textContent =
-      card.dataset.description || card.querySelector("p").textContent;
+      if (!Array.isArray(currentImages) || currentImages.length === 0) {
+        currentImages = [mainImage.getAttribute("src")];
+      }
 
-    displayImage();
+      currentIndex = 0;
 
-    lightbox.classList.add("open");
-    document.body.style.overflow = "hidden";
+      lightboxTitle.textContent =
+        card.dataset.title || card.querySelector("h3")?.textContent || "";
 
-    closeLightbox.focus();
+      lightboxDescription.textContent =
+        card.dataset.description || card.querySelector("p")?.textContent || "";
+
+      displayImage();
+
+      lightbox.classList.add("open");
+      document.body.style.overflow = "hidden";
+
+      closeLightbox.focus();
+    });
 
   });
 
-});
 
-// AFFICHER LA PHOTO
-function displayImage() {
+  // AFFICHER LA PHOTO
+  function displayImage() {
 
-  lightboxImage.src = currentImages[currentIndex];
+    lightboxImage.src = currentImages[currentIndex];
+    lightboxImage.alt = lightboxTitle.textContent;
 
-  imageCounter.textContent =
-    `Photo ${currentIndex + 1} / ${currentImages.length}`;
+    imageCounter.textContent =
+      `Photo ${currentIndex + 1} / ${currentImages.length}`;
 
-  // Masquer les flèches s'il n'y a qu'une photo
-  prevImage.style.visibility =
-    currentImages.length > 1 ? "visible" : "hidden";
+    prevImage.style.visibility =
+      currentImages.length > 1 ? "visible" : "hidden";
 
-  nextImage.style.visibility =
-    currentImages.length > 1 ? "visible" : "hidden";
+    nextImage.style.visibility =
+      currentImages.length > 1 ? "visible" : "hidden";
+  }
+
+
+  // PHOTO SUIVANTE
+  nextImage.addEventListener("click", () => {
+
+    if (currentImages.length <= 1) return;
+
+    currentIndex = (currentIndex + 1) % currentImages.length;
+    displayImage();
+
+  });
+
+
+  // PHOTO PRÉCÉDENTE
+  prevImage.addEventListener("click", () => {
+
+    if (currentImages.length <= 1) return;
+
+    currentIndex =
+      (currentIndex - 1 + currentImages.length) % currentImages.length;
+
+    displayImage();
+
+  });
+
+
+  // FERMER LA FENÊTRE
+  function closePortfolioLightbox() {
+
+    lightbox.classList.remove("open");
+    document.body.style.overflow = "";
+    lightboxImage.src = "";
+
+  }
+
+  closeLightbox.addEventListener("click", closePortfolioLightbox);
+
+
+  // FERMER EN CLIQUANT À L'EXTÉRIEUR
+  lightbox.addEventListener("click", event => {
+
+    if (event.target === lightbox) {
+      closePortfolioLightbox();
+    }
+
+  });
+
+
+  // NAVIGATION AU CLAVIER
+  document.addEventListener("keydown", event => {
+
+    if (!lightbox.classList.contains("open")) return;
+
+    if (event.key === "Escape") {
+      closePortfolioLightbox();
+    }
+
+    if (event.key === "ArrowRight") {
+      nextImage.click();
+    }
+
+    if (event.key === "ArrowLeft") {
+      prevImage.click();
+    }
+
+  });
+
+} else {
+  console.error("Certains éléments HTML de la fenêtre des réalisations sont manquants.");
 }
-
-// PHOTO SUIVANTE
-nextImage.addEventListener("click", () => {
-
-  currentIndex = (currentIndex + 1) % currentImages.length;
-
-  displayImage();
-
-});
-
-// PHOTO PRECEDENTE
-prevImage.addEventListener("click", () => {
-
-  currentIndex =
-    (currentIndex - 1 + currentImages.length) % currentImages.length;
-
-  displayImage();
-
-});
-
-// FERMER LA FENETRE
-function closePortfolioLightbox() {
-
-  lightbox.classList.remove("open");
-
-  document.body.style.overflow = "";
-
-  lightboxImage.src = "";
-
-}
-
-closeLightbox.addEventListener("click", closePortfolioLightbox);
-
-// FERMER EN CLIQUANT A L'EXTERIEUR
-lightbox.addEventListener("click", event => {
-
-  if (event.target === lightbox) {
-    closePortfolioLightbox();
-  }
-
-});
-
-// FERMER AVEC ECHAP ET NAVIGUER AU CLAVIER
-document.addEventListener("keydown", event => {
-
-  if (!lightbox.classList.contains("open")) return;
-
-  if (event.key === "Escape") {
-    closePortfolioLightbox();
-  }
-
-  if (event.key === "ArrowRight") {
-    nextImage.click();
-  }
-
-  if (event.key === "ArrowLeft") {
-    prevImage.click();
-  }
-
-});

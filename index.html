@@ -15,6 +15,52 @@
 
 <body>
 
+<!-- FENÊTRE CARROUSEL DES RÉALISATIONS -->
+<div class="portfolio-lightbox" id="portfolioLightbox">
+
+  <!-- Bouton fermer -->
+  <button class="lightbox-close" aria-label="Fermer">
+    &times;
+  </button>
+
+  <div class="lightbox-content">
+
+    <!-- Titre du projet -->
+    <h2 id="lightboxTitle"></h2>
+
+    <!-- Description du projet -->
+    <p id="lightboxDescription"></p>
+
+    <!-- Carrousel des images -->
+    <div class="lightbox-carousel">
+
+      <button
+        class="lightbox-prev"
+        id="prevImage"
+        aria-label="Photo précédente">
+        &#10094;
+      </button>
+
+      <img
+        id="lightboxImage"
+        src=""
+        alt="Réalisation Natangué Digital">
+
+      <button
+        class="lightbox-next"
+        id="nextImage"
+        aria-label="Photo suivante">
+        &#10095;
+      </button>
+
+    </div>
+
+    <!-- Compteur des photos -->
+    <div class="lightbox-counter" id="imageCounter"></div>
+
+  </div>
+</div>
+
   <header class="header">
     <div class="container nav">
   
@@ -377,38 +423,48 @@
     <!-- Galerie -->
     <div class="portfolio-grid">
 
-      <article class="portfolio-card reveal" data-category="branding">
-        <div class="portfolio-image">
-          <img src="images/realisations/logo-kenza.jpg"
-               alt="Identité visuelle Kenza Parfumerie"
-               loading="lazy">
-          <div class="portfolio-overlay">
-            <span class="portfolio-category">Branding</span>
-            <button class="portfolio-zoom" aria-label="Voir le projet">
-              <i class="fas fa-arrow-up-right-from-square"></i>
-              <article class="portfolio-card reveal"
-         data-category="branding"
-         data-title="Identité visuelle – Kenza Parfumerie"
-         data-description="Création d'un logo et de supports de communication pour une identité visuelle élégante."
-         data-images='[
-           "images/realisations/grille-tarifaire.jpg,
-           "images/realisations/etiquette-v3.png",
-           "images/realisations/kenza-etiquette.jpg"
-         ]'>
-        </article>
-        </button>
-          </div>
-        </div>
-        <div class="portfolio-info">
-          <div>
-            <h3>Identité visuelle</h3>
-            <p>Création de logo & univers de marque</p>
-          </div>
-          <span class="portfolio-number">01</span>
-        </div>
-      </article>
+   
+<article class="portfolio-card reveal"
+  data-category="branding"
+  data-title="Identité visuelle – Kenza Parfumerie"
+  data-description="Création d'un logo et de supports de communication pour une identité visuelle élégante."
+  data-images='[
+    "images/realisations/grille-tarifaire.jpg",
+    "images/realisations/etiquette-v3.png",
+    "images/realisations/kenza-etiquette.jpg"
+  ]'>
 
-      <article class="portfolio-card reveal" data-category="design">
+  <div class="portfolio-image">
+    <img src="images/realisations/grille-tarifaire.jpg"
+         alt="Identité visuelle Kenza Parfumerie"
+         loading="lazy">
+
+    <div class="portfolio-overlay">
+      <span class="portfolio-category">Branding</span>
+      <button class="portfolio-zoom" aria-label="Voir le projet">
+        <i class="fas fa-arrow-up-right-from-square"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="portfolio-info">
+    <div>
+      <h3>Identité visuelle</h3>
+      <p>Création de logo & univers de marque</p>
+    </div>
+    <span class="portfolio-number">01</span>
+  </div>
+</article>
+
+
+      <article class="portfolio-card reveal" data-category="design" 
+            data-title="Supports de communication – Mass Beauty"
+      data-description="Conception de supports professionnels pour le salon."
+      data-images='[
+        "images/realisations/etiquette-v3.png",
+        "images/realisations/mass-beauty-fidelite.jpg",
+        "images/realisations/mass-beauty-remerciement.jpg"
+      ]'>
         <div class="portfolio-image">
           <img src="images/realisations/cartes-mass-beauty.jpg"
                alt="Cartes professionnelles Mass Beauty"
