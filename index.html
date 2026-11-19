@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   
 </head>
+
 <body>
 
   <header class="header">
@@ -385,7 +386,17 @@
             <span class="portfolio-category">Branding</span>
             <button class="portfolio-zoom" aria-label="Voir le projet">
               <i class="fas fa-arrow-up-right-from-square"></i>
-            </button>
+              <article class="portfolio-card reveal"
+         data-category="branding"
+         data-title="Identité visuelle – Kenza Parfumerie"
+         data-description="Création d'un logo et de supports de communication pour une identité visuelle élégante."
+         data-images='[
+           "images/realisations/logo-kenza.jpg",
+           "images/realisations/kenza-carte.jpg",
+           "images/realisations/kenza-etiquette.jpg"
+         ]'>
+        </article>
+        </button>
           </div>
         </div>
         <div class="portfolio-info">
@@ -579,7 +590,29 @@
 <footer>
   <p>© 2026 Natangué Digital</p>
 </footer>
+<!-- FENÊTRE DÉTAILS DES RÉALISATIONS -->
+<div class="portfolio-lightbox" id="portfolioLightbox">
+  <button class="lightbox-close" aria-label="Fermer">&times;</button>
 
+  <div class="lightbox-content">
+    <h2 id="lightboxTitle"></h2>
+    <p id="lightboxDescription"></p>
+
+    <div class="lightbox-carousel">
+      <button class="lightbox-prev" id="prevImage" aria-label="Photo précédente">
+        &#10094;
+      </button>
+
+      <img id="lightboxImage" src="" alt="Réalisation Natangué Digital">
+
+      <button class="lightbox-next" id="nextImage" aria-label="Photo suivante">
+        &#10095;
+      </button>
+    </div>
+
+    <div class="lightbox-counter" id="imageCounter"></div>
+  </div>
+</div>
 <script src="script.js">
   const reveals = document.querySelectorAll('.reveal');
 
